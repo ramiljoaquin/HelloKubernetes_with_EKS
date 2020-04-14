@@ -11,21 +11,21 @@ Kubernetes fans rejoice. You can now use this popular container orchestration to
 
 ## Learning objectives
 
-Setting up Kubernetes on AWS
-Scaling EKS workers
-Adding EKS storage and networks
-Configuring application security
-Monitoring EKS deployments
-Skills covered in this course
-Google Kubernetes Engine (GKE)Amazon Web Services (AWS)Kubernetes
-Viewers of this course
+- Setting up Kubernetes on AWS
+- Scaling EKS workers
+- Adding EKS storage and networks
+- Configuring application security
+- Monitoring EKS deployments
+- Skills covered in this course
+- Google Kubernetes Engine (GKE)Amazon Web Services (AWS)Kubernetes
+- Viewers of this course
 
 ## What they do
 
 Software Developer Software Developer Technology Manager Information Technology Consultant Information Technology System Administrator
 Where they work
 IBM IBM Tata Consultancy Services Tata Consultancy Services Amazon Amazon Cognizant Cognizant AT&T AT&T
-Instructor
-Robert Starmer
+
+## Instructor
 Robert Starmer
 Cloud Advisor, Founder of Kumulus Technologies
