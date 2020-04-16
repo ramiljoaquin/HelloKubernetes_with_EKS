@@ -36,15 +36,15 @@ Cloud Advisor, Founder of Kumulus Technologies
 
 - [Instructor] In order to leverage the EKS service from Amazon, there are a couple of precursor stages that we have to do. 
 
-## Pre-EKS Deployment
+# Pre-EKS Deployment
 ### 1. Proper IAM configuration
 - Firstly, we have to set up IAM, the identity and authentication management resources in Amazon, for our EKS environment. 
 - We have to create the appropriate role that the EKS service is going to use to implement features on our behalf, within our environment. 
 
-## 2. VPC created for EKS use
+### 2. VPC created for EKS use
 - And we also have to create a VPC, specifically for EKS to use. This keeps it separate from all of the other resources that we might try to create in our environments and allows it to have the appropriate network segments and network segmentation needed to apply all of its services. 
 
-## EKS Core Services
+# EKS Core Services
 ### 1. Create cluster control plane
 - Then we can deploy the EKS services themselves. We do this by using the web console, is the easiest way to actually deploy this, and deploying EKS through the web console. - You can also do it via the AWS CLI, but the web console is a straightforward way of approaching this. 
 
@@ -56,7 +56,7 @@ Cloud Advisor, Founder of Kumulus Technologies
 - And lastly, we actually add into our control plane, because EKS is really managing the control plane for us, we add our worker nodes. We're going to do that with another cloud formation template.
 - And then we need to authenticate those worker nodes into our EKS cluster. And we're going to do that by applying a config map, which is a classic, or rather, standard Kubernetes model for passing in information into the system. That same configuration map is useful for other authentication purposes as well. 
 
-## Clean Up and Start Using System
+# Clean Up and Start Using System
 ### 1. Wait for the nodes to register
 And finally, we just have to wait for our worker nodes to register. That usually only takes 30 to 60 seconds and then we can start using our environment. 
 ### 2. Ensure you can create an ELB
