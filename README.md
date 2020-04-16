@@ -51,11 +51,18 @@ Cloud Advisor, Founder of Kumulus Technologies
 ### 2. Establish kubectl credentials
 - We need to establish a set of credentials and there's an authenticator, a specific authenticator application, along with the kubectl Kubernetes command line that need to be installed. 
 - And then we need to enable that configuration. And we can do that with the AWS command line, adding our Kubernetes configuration automatically, just by passing in our newly-created cluster name. Or we can also manually create those configuration commands as well. 
-- And lastly, we actually add into our control plane, because EKS is really managing the control plane for us, we add our worker nodes. 
 
-We're going to do that with another cloud formation template. And then we need to authenticate those worker nodes into our EKS cluster. And we're going to do that by applying a config map, which is a classic, or rather, standard Kubernetes model for passing in information into the system. That same configuration map is useful for other authentication purposes as well. 
+### 3. Create worker nodes
+- And lastly, we actually add into our control plane, because EKS is really managing the control plane for us, we add our worker nodes. We're going to do that with another cloud formation template.
+- And then we need to authenticate those worker nodes into our EKS cluster. And we're going to do that by applying a config map, which is a classic, or rather, standard Kubernetes model for passing in information into the system. That same configuration map is useful for other authentication purposes as well. 
 
-And finally, we just have to wait for our worker nodes to register. That usually only takes 30 to 60 seconds and then we can start using our environment. There is one other thing that you may have to do if you haven't done it already, and that is make sure that you've enabled the service linking role for elastic load balancing. And that's just this command here. And finally we have our environment available to us to run Kubernetes.
+## Clean Up and Start Using System
+### 1. Wait for the nodes to register
+And finally, we just have to wait for our worker nodes to register. That usually only takes 30 to 60 seconds and then we can start using our environment. 
+### 2. Ensure you can create an ELB
+- There is one other thing that you may have to do if you haven't done it already, and that is make sure that you've enabled the service linking role for elastic load balancing. And that's just this command here. 
+### 3. Use your Kubernetes Environment
+And finally we have our environment available to us to run Kubernetes.
 
 
 
