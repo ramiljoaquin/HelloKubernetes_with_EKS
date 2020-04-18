@@ -6,11 +6,11 @@ As ingress can route based on DNS, we can also do a little DNS manipulation to g
 
 1) Since we're using 1.10.0 Kubernetes (or newer) we'll need to make sure we have a cluster role binding for the services to use:
 
-kubectl apply -f https://raw.githubusercontent.com/containous/traefik/master/examples/k8s/traefik-rbac.yaml
+kubectl apply -f https://raw.githubusercontent.com/containous/traefik/v1.7/examples/k8s/traefik-rbac.yaml
 
 2) We'll leverage the deployment model for our ingress controller, as we don't necessarily want to bind host address, and would rather have the ingress transit through the normal kube-proxy functions (note that we're changing the default "NodePort" type to "LoadBalancer"):
 
-kubectl apply -f <(curl -so - https://raw.githubusercontent.com/containous/traefik/master/examples/k8s/traefik-deployment.yaml | sed -e 's/NodePort/LoadBalancer/')
+kubectl apply -f <(curl -so - https://raw.githubusercontent.com/containous/traefik/v1.7/examples/traefik-deployment.yaml | sed -e 's/NodePort/LoadBalancer/')
 
 3) We can now expose our hostname app as an ingress resource:
 
