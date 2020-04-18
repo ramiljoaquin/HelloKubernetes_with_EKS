@@ -10,7 +10,7 @@ kubectl apply -f https://raw.githubusercontent.com/containous/traefik/v1.7/examp
 
 2. We'll leverage the deployment model for our ingress controller, as we don't necessarily want to bind host address, and would rather have the ingress transit through the normal kube-proxy functions (note that we're changing the default "NodePort" type to "LoadBalancer"):
 
-kubectl apply -f <(curl -so - https://github.com/containous/traefik/blob/v1.7/examples/k8s/traefik-deployment.yaml | sed -e 's/NodePort/LoadBalancer/')
+kubectl apply -f <(curl -so - https://raw.githubusercontent.com/containous/traefik/v1.7/examples/k8s/traefik-deployment.yaml | sed -e 's/NodePort/LoadBalancer/')
 
 3. We can now expose our hostname app as an ingress resource:
 
